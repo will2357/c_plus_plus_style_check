@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 #
-# A simple-minded style checker for C code.
+# A simple-minded style checker for C and C++ code.
 # This only catches the most obvious style mistakes, and occasionally
 # flags stuff that isn't wrong.
 #
@@ -25,7 +25,7 @@ comma_space         = re.compile(",[^ ]")
 # most common mistakes.  Add other operators as necessary and/or feasible.
 operator_space      = re.compile("(\w(\+|\-|\*|\<|\>|\=)\w)" + \
                                  "|(\w(\=\=|\<\=|\>\=)\w)")
-comment_line        = re.compile("^\s*\/\*.*\*\/\s*$|^\/\/.*$")
+comment_line        = re.compile("^\s*\/\*.*\*\/\s*$|\/\/.*$")
 open_comment_space  = re.compile("\/\*[^ *\n]")
 close_comment_space = re.compile("[^ *]\*\/")
 paren_curly_space   = re.compile("\)\{")
